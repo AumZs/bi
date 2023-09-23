@@ -67,10 +67,10 @@ $rs = mysqli_fetch_array($result);
                 <td width="100">Username</td>
                 <td><label> <?php echo "$rs[t_username]"; ?></label></td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td width="100">Password</td>
                 <td><label> <?php echo "$rs[t_password]"; ?></label></td>
-              </tr>
+              </tr> -->
               <tr>
                 <td width="221">ตำแหน่ง</td>
                 <td><?php
@@ -91,7 +91,8 @@ $rs = mysqli_fetch_array($result);
               </tr>
               <tr>
                 <td colspan="2">
-                  <div align="center">
+                  <div width="100%" align="center">
+                    <input type="button" onclick=window.history.back(); name="button2" id="button2" value="Back" />
                   </div>
                 </td>
               </tr>

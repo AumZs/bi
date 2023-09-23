@@ -83,32 +83,37 @@ if (isset($_SESSION["valid_uname"]) && isset($_SESSION["valid_pwd"]) && isset($_
                   <td width="221">ตำแหน่ง</td>
                   <td width="203"><select name="po_id" id="po_id">
                       <?php
-                      $sql1 = "SELECT*FROM position";
+                      $sql1 = "SELECT * FROM position";
                       $result1 = mysqli_query($conn, $sql1);
+
                       while ($rs1 = mysqli_fetch_array($result1)) {
                         echo "<option value=\"$rs1[po_id]\"";
-                        if ("rs[po_id]" == "$rs1[po_id]") {
-                          echo 'selected';
+
+                        if ($rs['po_id'] == $rs1['po_id']) {
+                          echo ' selected="selected"';
                         }
-                        echo ">$rs1[po_name]";
-                        echo "</option>\n";
+
+                        echo ">$rs1[po_name]</option>\n";
                       }
                       ?>
+
                     </select></td>
                 </tr>
                 <tr>
                   <td width="221">กลุ่มสาระ</td>
                   <td width="203"><select name="d_id" id="d_id">
                       <?php
-                      $sql1 = "SELECT*FROM department";
+                      $sql1 = "SELECT * FROM department";
                       $result1 = mysqli_query($conn, $sql1);
+
                       while ($rs1 = mysqli_fetch_array($result1)) {
                         echo "<option value=\"$rs1[d_id]\"";
-                        if ("rs[d_id]" == "$rs1[d_id]") {
-                          echo 'selected';
+
+                        if ($rs['d_id'] == $rs1['d_id']) {
+                          echo ' selected="selected"';
                         }
-                        echo ">$rs1[d_name]";
-                        echo "</option>\n";
+
+                        echo ">$rs1[d_name]</option>\n";
                       }
                       ?>
                     </select></td>

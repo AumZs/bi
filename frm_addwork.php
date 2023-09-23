@@ -21,7 +21,7 @@ include('connect.php');
   ?>
   <tr style="background-color: white;">
     <td>
-      <form id="form1" name="form1" method="post" action="addwork.php">
+      <form id="form1" name="form1" method="post" action="addwork.php"><input type="hidden" name="w_id" id="w_id" />
         <table width="344" border="1" align="center" cellpadding="5" cellspacing="0">
           <tr>
             <td colspan="2" align="center">เพิ่มผลงาน</td>

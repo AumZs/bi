@@ -46,7 +46,7 @@ $result = mysqli_query($conn, $sql);
             ?>
               <tr>
                 <td width="180"><?php echo "$rs[std_id]"; ?></td>
-                <td width="70"><?php echo "$rs[std_name]"; ?></td>
+                <td width="70"><?php echo "<a href=\"frm_detailstd.php?std_id=$rs[std_id]\">"; ?><?php echo "$rs[std_name]"; ?><?php echo "</a>"; ?></td>
                 <td width="150"><?php echo "$rs[c_name]"; ?></td>
                 <td width="68" align="center"><?php echo "<a href=\"frm_editstudent.php?std_id=$rs[std_id]\" >"; ?>แก้ไข<?php echo "</a>"; ?></td>
                 <td width="68" align="center"><?php echo "<a href=\"frm_delstudent.php?std_id=$rs[std_id]\" >"; ?>ลบ<?php echo "</a>"; ?></td>
